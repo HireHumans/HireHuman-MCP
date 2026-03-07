@@ -1,0 +1,33 @@
+name: hirehuman
+displayName: HireHumans.eu
+description: Book real humans for physical tasks - deliveries, inspections, dog walks and 80+ task types across AT/DE/CH
+icon: https://hirehumans.eu/icon-512.png
+category: productivity
+author:
+  name: AdReach GmbH
+  url: https://hirehumans.eu
+  email: api@hirehumans.eu
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      HIREHUMAN_API_KEY:
+        type: string
+        description: "API key for HireHumans.eu (default: demo key with 10 calls/day)"
+        default: "hh_demo_public_v1"
+      HIREHUMAN_API_URL:
+        type: string
+        description: "API base URL (default: production)"
+        default: "https://hirehumans.eu/api/hh"
+  commandFunction:
+    |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@hirehuman/mcp'],
+      env: {
+        HIREHUMAN_API_KEY: config.HIREHUMAN_API_KEY ?? 'hh_demo_public_v1',
+        HIREHUMAN_API_URL: config.HIREHUMAN_API_URL ?? 'https://hirehumans.eu/api/hh',
+      }
+    })

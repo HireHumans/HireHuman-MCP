@@ -1,0 +1,44 @@
+{
+  "name": "@hirehuman/mcp",
+  "version": "0.1.0",
+  "description": "MCP Server for HireHumans.eu – Book real humans for physical tasks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "hirehuman-mcp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "node dist/cli.js --test"
+  },
+  "keywords": [
+    "mcp", "model-context-protocol", "ai-agent", "human-tasks",
+    "physical-tasks", "automation", "claude", "anthropic"
+  ],
+  "author": "AdReach GmbH <api@hirehumans.eu>",
+  "license": "MIT",
+  "homepage": "https://hirehumans.eu/for-agents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hirehumans-eu/hirehuman-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hirehumans-eu/hirehuman-mcp/issues",
+    "email": "api@hirehumans.eu"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}
