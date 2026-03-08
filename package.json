@@ -1,6 +1,6 @@
 {
   "name": "@hirehuman/mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP Server for HireHumans.eu – Book real humans for physical tasks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,10 +21,10 @@
   "homepage": "https://hirehumans.eu/for-agents",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hirehumans-eu/hirehuman-mcp.git"
+    "url": "https://github.com/HireHumans/HireHuman-MCP.git"
   },
   "bugs": {
-    "url": "https://github.com/hirehumans-eu/hirehuman-mcp/issues",
+    "url": "https://github.com/HireHumans/HireHuman-MCP/issues",
     "email": "api@hirehumans.eu"
   },
   "engines": {
