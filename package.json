@@ -1,0 +1,66 @@
+{
+  "name": "hirehuman-mcp",
+  "version": "1.1.0",
+  "description": "MCP server for HireHumans.eu – book verified humans for physical real-world tasks via AI agents. EU-hosted, GDPR-compliant.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "hirehuman-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "smithery.yaml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node -e \"console.log('Build OK')\"",
+    "version:patch": "npm version patch && git push --follow-tags",
+    "version:minor": "npm version minor && git push --follow-tags"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "claude",
+    "anthropic",
+    "human-in-the-loop",
+    "physical-tasks",
+    "real-world",
+    "europe",
+    "gdpr",
+    "austria",
+    "hirehuman",
+    "task-automation",
+    "errand",
+    "on-demand",
+    "agentic"
+  ],
+  "author": "HireHumans.eu <api@hirehumans.eu>",
+  "license": "MIT",
+  "homepage": "https://hirehumans.eu/agents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hirehuman/hirehuman-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/hirehuman/hirehuman-mcp/issues",
+    "email": "api@hirehumans.eu"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0"
+  }
+}

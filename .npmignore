@@ -1,0 +1,6 @@
+src/
+.github/
+*.ts
+tsconfig.json
+.env*
+npm-debug.log*

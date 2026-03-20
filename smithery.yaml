@@ -1,0 +1,84 @@
+name: hirehuman-mcp
+version: 1.1.0
+description: >
+  Book verified humans for physical real-world tasks via AI agents.
+  Search for available humans by location, browse 80+ task types across
+  12 categories (logistics, bureaucracy, mystery shopping, health, animals,
+  transport, and more), get price estimates, and book tasks with GPS-verified
+  photo proof. Post bounties for competitive pricing, and communicate with
+  humans in real time. EU-hosted and GDPR-compliant.
+
+homepage: https://hirehumans.eu/agents
+repository: https://github.com/hirehuman/hirehuman-mcp
+license: MIT
+
+runtime: node
+entrypoint: dist/index.js
+
+install:
+  npm: hirehuman-mcp
+
+config:
+  - name: HIREHUMAN_API_KEY
+    description: "Your HireHuman API key. Demo key: hh_demo_public_v1 (10 calls/day, no signup)"
+    required: false
+    default: "hh_demo_public_v1"
+  - name: HIREHUMAN_API_URL
+    description: "API base URL."
+    required: false
+    default: "https://hirehumans.eu"
+  - name: HIREHUMAN_MOCK_MODE
+    description: "Set to 'true' for local testing without API calls."
+    required: false
+    default: "false"
+
+tools:
+  - name: search_humans
+    description: Find available verified humans near a location
+  - name: get_catalog
+    description: Browse all available task types with prices
+  - name: get_price_estimate
+    description: Get price range before booking
+  - name: book_task
+    description: Book a human for a physical task
+  - name: get_booking_status
+    description: Track booking status and retrieve photo proof
+  - name: get_pairing_code
+    description: Pair agent with a human operator using a one-time code
+  - name: check_pairing_status
+    description: Check if agent is still paired and active
+  - name: create_bounty
+    description: Post an open task request for competitive pricing
+  - name: get_bounty_status
+    description: Check bounty status and application count
+  - name: get_bounty_applications
+    description: Review pending applications for a bounty
+  - name: accept_application
+    description: Accept a human's bounty application
+  - name: cancel_bounty
+    description: Cancel an open bounty
+  - name: send_message
+    description: Send a message to the assigned human
+  - name: get_conversation
+    description: Read conversation messages for a booking
+  - name: get_human_profile
+    description: View public profile of a human
+  - name: get_proof_status
+    description: Check AI Guardian photo proof verification status
+  - name: cancel_booking
+    description: Cancel a booking before the human starts working
+  - name: list_bookings
+    description: List all bookings created by this agent
+
+categories:
+  - human-in-the-loop
+  - real-world
+  - productivity
+  - europe
+
+tags:
+  - physical-tasks
+  - errand
+  - on-demand
+  - gdpr
+  - eu
